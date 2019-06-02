@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title></title>
+	<!-- plugins:css -->
+	<link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+	<link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- endinject -->
+	<!-- plugin css for this page -->
+	<!-- End plugin css for this page -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- endinject -->
+	<link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body onload="window.print();">
+	<section class="invoice">
+    <!-- title row -->
+    <center>
+
+<br><br>
+
+<a href="{{ url('/prnpriview') }}" class="btnprn btn">Print Preview</a></center>
+
+<script type="text/javascript">
+
+     $(document).ready(function(){
+
+              $('.btnprn').printPage();
+
+     });
+
+</script>
+
+<center>
+
+<h1>Course List </h1>
+
+<table class="table" >
+
+<tr><th>Id</th><th>Name</th><th>Email</th><th>Course</th></tr>
+      <!-- /.col -->
+
+    <tr><td>{{ $student->id }}</td>
+
+     <td>{{ $student->name }}</td>
+
+     <td>{{ $student->email }}</td>
+
+     <td>{{ $student->course }}</td> </tr>
+    
+      
+    <!-- /.row -->
+  </section>
+				
+			</body>
+			</html>
